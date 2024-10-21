@@ -1,7 +1,7 @@
 #!name = Telegram DC
 #!desc = 电报数据中心分流。
 #!author = Chenia-N[https://github.com/Chenia-N]
-#!icon = https://raw.githubusercontent.com/Chenia-N/Loon/main/Icons/app/telegram.png
+#!icon = https://raw.githubusercontent.com/Chenia-N/Loon/main/Icons/app/telegram.png?token=GHSAT0AAAAAACZFMZBPIL7LENJHSY46UAMCZYVZUQQ
 #!date = 2024-04-29 23:55
 
 [Rule]
