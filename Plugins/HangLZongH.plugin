@@ -1,0 +1,22 @@
+#!name = 航旅纵横去广告
+#!desc = 过滤航旅纵横广告
+#!author=奶思[https://github.com/fmz200],Chenia-N[https://github.com/Chenia-N]
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Umetrip.png
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAds.plugin
+#!tag=去广告, fmz200, 奶思, 航旅纵横
+#!date = 2024-11-1 19:24
+
+[Rule]
+#URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
+
+[Rewrite]
+^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native reject
+^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite reject-dict
+
+[Script]
+http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/Umetrip_remove_ads.js, requires-body=true, timeout=60, tag=航旅纵横去广告
+
+[MitM]
+hostname = home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com, bkclient.umetrip.com.cn, oss.umetrip.com
