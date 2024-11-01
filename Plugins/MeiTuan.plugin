@@ -14,6 +14,9 @@
 ^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
+^https:\/\/p(0|1)\.meituan\.net\/linglong\/\w{36,38}\.gif reject
+^https:\/\/p0\.meituan\.net\/travelcube\/7b1797f1a0e9dd936ee134657470507f2067\.png($|\.webp($|[^\s]+)) reject
+^https:\/\/p0\.meituan\.net\/linglong\/7ae4f2836035e4b439e58476985592142777\.png($|\.webp($|@[^\s]+)) reject
 # 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 
@@ -26,4 +29,4 @@
 ^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
 
 [MitM]
-hostname = img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, cdb.meituan.com, peisongapi.meituan.com
+hostname = img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, cdb.meituan.com, peisongapi.meituan.com, p0.meituan.net, p1.meituan.net
