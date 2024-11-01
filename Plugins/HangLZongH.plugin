@@ -5,7 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAds.plugin
 #!tag=去广告, fmz200, 奶思, 航旅纵横
-#!date = 2024-11-1 19:24
+#!date = 2024-11-1 19:40
 
 [Rule]
 #URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
