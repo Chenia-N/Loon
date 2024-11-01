@@ -1,7 +1,7 @@
 #!name = 饿了么去广告
 #!desc = 过滤饿了么广告
 #!author=奶思[https://github.com/fmz200],Chenia-N[https://github.com/Chenia-N]
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/eleme.png
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAds.plugin
 #!tag=去广告, fmz200, 奶思
