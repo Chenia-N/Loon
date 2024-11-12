@@ -1,0 +1,14 @@
+#!name = Telegram DC
+#!desc = 电报数据中心分流。
+#!author = Chenia-N[https://github.com/Chenia-N]
+#!icon = https://raw.githubusercontent.com/Chenia-N/Loon/main/Icons/app/telegram.png
+#!date = 2024-11-12 20:19
+
+[Rule]
+IP-ASN, 44907, HK, no-resolve
+IP-ASN, 62014, SG, no-resolve
+IP-ASN, 59930, US, no-resolve
+IP-ASN, 62041, EU, no-resolve
+IP-ASN, 211157, EU, no-resolve
+IP-CIDR, 5.28.192.0/18, EU, no-resolve
+IP-CIDR, 109.239.140.0/24, EU, no-resolve
