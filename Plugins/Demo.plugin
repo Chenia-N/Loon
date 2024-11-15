@@ -1,0 +1,32 @@
+#!name = 
+#!desc = 
+#!openUrl = https://apps.apple.com/app/*****
+#!author = Chenia-N[https://github.com/Chenia-N]
+#!tag = 
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!homepage = https://github.com/Chenia-N/Loon/blob/main/README.md
+#!icon = 
+#!date = 2024-11-07 11:15
+
+
+[Host]
+# 举例
+*.tencent.com = server:https://doh.pub/dns-query
+
+[Rule]
+# 举例
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, PROXY
+DOMAIN-SUFFIX, iot-tencent.com, PROXY
+USER-AGENT, WeChat*, PROXY
+IP-ASN,132203, no-resolve, PROXY
+
+DOMAIN-SUFFIX, wxs.qq.com, REJECT
+
+[Rewrite]
+# 古茗 //newton.gumingnc.com
+http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) script-path = https://kelee.one/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body = true, tag = 古茗去广告
+
+[MitM]
+hostname = newton.gumingnc.com
