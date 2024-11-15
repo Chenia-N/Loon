@@ -1,0 +1,23 @@
+#!name = Emby Bypass
+#!desc = Emby服务器分流
+#!author = Chenia-N[https://github.com/Chenia-N]
+#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/emby.png
+#!date = 2024-11-15 12:20
+
+[Rule]
+# 江湖
+DOMAIN-SUFFIX, reddust.link, PROXY
+
+# MisakaF
+DOMAIN-SUFFIX, misakaf.org, PROXY
+
+# 探花TV
+DOMAIN, tanhuatv.site, PROXY
+
+# Nijigem
+DOMAIN, media.nijigem.by, PROXY
+
+# Nyamedia
+DOMAIN-SUFFIX, misakaf.org, PROXY
+
+
