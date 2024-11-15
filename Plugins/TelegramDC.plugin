@@ -2,10 +2,10 @@
 #!desc = 电报数据中心分流。
 #!author = Chenia-N[https://github.com/Chenia-N]
 #!icon = https://raw.githubusercontent.com/Chenia-N/Loon/main/Icons/app/telegram.png
-#!date = 2024-11-12 20:19
+#!date = 2024-11-15 11:19
 
 [Rule]
-IP-ASN, 44907, Hong Kong, no-resolve
+IP-ASN, 44907, Singapore, no-resolve
 IP-ASN, 62014, Singapore, no-resolve
 IP-ASN, 59930, United States, no-resolve
 IP-ASN, 62041, European Union, no-resolve
