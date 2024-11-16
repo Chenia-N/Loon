@@ -1,7 +1,7 @@
 #!name = Emby Bypass
 #!desc = Emby服务器分流
 #!author = Chenia-N[https://github.com/Chenia-N]
-#!icon = https://raw.githubusercontent.com/Chenia-N/Loon/refs/heads/main/Icons/app/emby.png
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 #!date = 2024-11-15 12:20
 
 [Rule]
