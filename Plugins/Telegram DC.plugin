@@ -2,11 +2,11 @@
 #!desc = Telegram数据中心分流
 #!author = Chenia-N[https://github.com/Chenia-N]
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-#!date = 2024-11-17 3:19
+#!date = 2024-11-19 23:19
 
 [Rule]
 # 防止TG加载转圈
-IP-CIDR, 95.161.76.100/31, REJECT-NO-DROP, no-resolve
+#IP-CIDR, 95.161.76.100/31, REJECT-NO-DROP, no-resolve
 # 数据中心分流
 IP-ASN, 44907, Singapore, no-resolve
 IP-ASN, 62014, Singapore, no-resolve
