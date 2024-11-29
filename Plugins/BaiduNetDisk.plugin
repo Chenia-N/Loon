@@ -12,15 +12,18 @@
 
 # 2023-08-19 13:48:55
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
-# 2024-09-08
-# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/BaiduCloud.conf
-# 2024-09-08 02:01:52
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin
+# 2024-11-16
+# https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js
+# 2024-11-29
+# https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js
+# 2024-11-28 00:00:00
+# https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin
 
 [Rule]
+# 以下Rule已被HTTPDNS拦截器和广告拦截平台包含
+# 拦截HTTPDNS
+
 # 字节跳动广告
-
-
 # 百度联盟 - 广告服务商
 
 [Rewrite]
