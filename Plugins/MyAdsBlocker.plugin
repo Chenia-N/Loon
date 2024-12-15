@@ -57,13 +57,6 @@ IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # ======= C ======= #
-# Clue 智库
-DOMAIN, api.helloclue.com, REJECT
-DOMAIN, brahe.apptimize.com, REJECT
-DOMAIN, collector.clue.run, REJECT
-DOMAIN, images.ctfassets.net, REJECT
-DOMAIN, mapi.apptimize.com, REJECT
-DOMAIN, md-i-s.apptimize.com, REJECT
 
 # ======= D ======= #
 # DNS 无响应
