@@ -18,8 +18,8 @@ DOMAIN,stun1.douyucdn.cn
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
 DOMAIN-SUFFIX,pcdn.xmcdn.com
+DOMAIN,pcdn.yximgs.com
 USER-AGENT,*pcdn*biliapi.net
 USER-AGENT,*pcdn*youku.com
 USER-AGENT,*p2p*douyucdn.cn
 USER-AGENT,*p2p*qq.com
-DOMAIN,pcdn.yximgs.com
