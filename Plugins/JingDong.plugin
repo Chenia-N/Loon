@@ -1,14 +1,14 @@
 #!name = 京东去广告
 #!desc = 过滤京东广告，嵌入历史比价信息。历史比价通知版，点击商品页面详情看弹窗通知 。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = RuCu6[https://github.com/RuCu6], 苍井灰灰[https://github.com/wf021325], MuTu[https://github.com/githubdulong], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], mw99[https://github.com/mw418/]
 
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/Chenia-N/Loon/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jingdong.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/JD.png
 #!date = 2024-12-27 12:00
 
 # 2024-11-28 00:00:00
@@ -23,7 +23,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT, no-resolve
 URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Rewrite]
-#^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
 
 [Script]
