@@ -1,5 +1,5 @@
 #!name = MyAdsBlocker
-#!desc = 去广告插件
+#!desc = 自用广告过滤器，过滤部分APP&小程序广告
 #!openUrl = 
 #!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile], ZenmoFeiShi[https://github.com/ZenmoFeiShi]
 #!tag = 去广告
