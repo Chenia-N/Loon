@@ -2,12 +2,9 @@
 #!desc = Emby服务器分流
 #!author = Chenia-N[https://github.com/Chenia-N]
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-#!date = 2024-11-15 12:20
+#!date = 2025-1-17 0:20
 
 [Rule]
-# 江湖
-DOMAIN-SUFFIX, reddust.link, PROXY
-
 # MisakaF
 DOMAIN-SUFFIX, misakaf.org, PROXY
 
@@ -15,9 +12,12 @@ DOMAIN-SUFFIX, misakaf.org, PROXY
 DOMAIN, tanhuatv.site, PROXY
 
 # Nijigem
-DOMAIN, media.nijigem.by, PROXY
+DOMAIN-SUFFIX, nijigem.by, PROXY
 
 # Nyamedia
-DOMAIN-SUFFIX, misakaf.org, PROXY
+DOMAIN-SUFFIX, bangumi.ca, PROXY
+
+# OUO
+DOMAIN-SUFFIX, ouonet.org, PROXY
 
 
