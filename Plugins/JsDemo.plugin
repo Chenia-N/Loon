@@ -1,0 +1,17 @@
+#!name = JS解锁
+#!desc = 自用JS解锁。
+#!openUrl = 
+#!author = 
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.5(805)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/iTunes.png
+#!date = 2025-01-01 00:00
+
+
+[Script]
+http-response ^https?:\/\/.+\/api\/(userinfo|setapp|newstartad|newreg|Get_vod_list|dongtais).php script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/luolidao.js, requires-body = true, enable=true, tag = 萝莉岛解锁
+
+[MitM]
+hostname = *.cloudfront.net,dag29jmgma1g.site,*site,d1no17eycutrsi.cloudfront.net,lldajbfyobffkbg288-api.com
