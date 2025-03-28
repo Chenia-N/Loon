@@ -16,6 +16,23 @@
 DOMAIN, ad.12306.cn, DIRECT
 
 # ======= A ======= #
+# Apple
+DOMAIN, ca.iadsdk.apple.com, DIRECT
+DOMAIN-SUFFIX, advp.apple.com, REJECT
+DOMAIN-SUFFIX, iad-apple.com, REJECT
+DOMAIN-SUFFIX, iadsdk.apple.com, REJECT
+DOMAIN, advertising.apple.com, REJECT
+DOMAIN, api-adservices.apple.com, REJECT
+DOMAIN, apple.comscoreresearch.com, REJECT
+DOMAIN, banners.itunes.apple.com, REJECT
+DOMAIN, iad.apple.com, REJECT
+DOMAIN, iadcontent.apple.com, REJECT
+DOMAIN, iadctest.qwapi.com, REJECT
+DOMAIN, iadmoo.apple.com, REJECT
+DOMAIN, iadworkbench.apple.com, REJECT
+DOMAIN, launch.apple.com, REJECT
+DOMAIN, qwapi.apple.com, REJECT
+
 # 阿里巴巴
 DOMAIN-SUFFIX, ut.taobao.com, REJECT
 DOMAIN, adashx.m.taobao.com, REJECT
@@ -46,6 +63,7 @@ DOMAIN, lookup.api.bsb.baidu.com, REJECT
 # 百度
 DOMAIN-SUFFIX, pos.baidu.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
+DOMAIN, afd.baidu.com, REJECT
 
 # 百度地图
 DOMAIN, afd.baidu.com, REJECT
@@ -138,7 +156,23 @@ DOMAIN, id.hadron.ad.gt, REJECT
 # ======= T ======= #
 # 太平洋保险
 DOMAIN, a.cpic.com.cn, REJECT
-
+# 腾讯
+DOMAIN-KEYWORD, trace.qq.com, REJECT
+DOMAIN-KEYWORD, trace.video.qq.com, REJECT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN-SUFFIX, l.qq.com, REJECT
+DOMAIN, adsmind.gdtimg.com, REJECT
+DOMAIN, info4.video.qq.com, REJECT
+DOMAIN, info6.video.qq.com, REJECT
+DOMAIN, ios.video.mpush.qq.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, pgdt.ugdtimg.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT
+DOMAIN, tmeadcomm.y.qq.com, REJECT
+DOMAIN, tpns.qq.com, REJECT
+IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
 
 # ======= W ======= #
 
@@ -183,6 +217,9 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 4 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
+# 555电影
+# ^https:\/\/(app-v1\.ecoliving168\.com|852b95d36\.xwlpk\.cn)\/api\/v1\/advert\/config reject-dict
+^https:\/\/(app-v1\.ecoliving168\.com|852b95d36\.xwlpk\.cn)\/api\/v1\/movie\/index_recommend\? response-body-json-jq '.data[].list |= map(select(.type != 3)) | .data |= map(select(.layout != "advert_self"))'
 # >>>>>>>>>>>>>>> ✅ 6 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 7 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 8 ✅ <<<<<<<<<<<<<<
@@ -209,8 +246,28 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
+# 百度 - www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 reject
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 reject-img
+^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject-img
+^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
+^https?:\/\/afd\.baidu\.com\/afd\/entry reject
+^https?:\/\/afd\.baidu\.com\/afd\/entry reject-img
+^https?:\/\/als\.baidu\.com\/clog\/clog reject
+^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
+^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php reject-img
+^https?:\/\/t\d{2}\.baidu\.com reject-img
+^https?:\/\/update\.pan\.baidu\.com\/statistics reject
+^https?:\/\/log.+?baidu\.com reject
+^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
+^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
+# 支付宝-菜鸟
+ ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # 大麦 //acs.m.taobao.com, img.alicdn.com
@@ -363,6 +420,18 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
+
+# QQ钱包 - m.qianbao.qq.com
+^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible reject
+# QQ音乐 - us.l.qq.com, y.gtimg.cn, music.y.qq.com
+^https?:\/\/us\.l\.qq\.com\/exapp reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ reject
+^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg reject-img
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads reject-img
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ reject
+^https:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd reject
+
 # > 去哪儿
 # hostname = qde.qunar.com, homefront.qunar.com, client.qunar.com
 ^https?:\/\/qde\.qunar\.com\/preload reject-200
@@ -402,11 +471,13 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com
 ^https?:\/\/btrace\.qq\.com reject-200
 ^https?:\/\/api2\.helper\.qq\.com\/game\/buttons reject-img
+# ^https?:\/\/\w+\.beacon\.qq\.com reject
+^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg reject
 ^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= reject-img
 ^https?:\/\/imgcache\.qq\.com\/qqlive\/ reject-img
 ^https?:\/\/mtteve\.beacon\.qq\.com\/analytics reject-img
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? reject-200
-^https?:\/\/ssl\.kohsocialapp\.qq\.com:10001\/game\/buttons reject-200
+^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info reject-200
 ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/app\/activity\/ reject-200
 ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/splash\/ reject-200
 ^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png reject-img
@@ -416,7 +487,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png reject-img
 ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ reject-img
 ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} reject-img
-^https?://bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ reject-dict
+^https?:\/\/bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ reject-dict
 
 # >>>>>>>>>>>>>>> ✅ V ✅ <<<<<<<<<<<<<<
 
@@ -525,4 +596,4 @@ http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 scr
 
 
 [MitM]
-hostname = portal.zjzwfw.gov.cn,cloud.189.cn, zt-app.go189.cn,btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com,qde.qunar.com, homefront.qunar.com, client.qunar.com,api.mcd.cn,creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com,cdb.meituan.com,apimobile.meituan.com,s.jiediankeji.com,res.hongyibo.com.cn,awg.enmonster.com,cdn-evone-ceph.echargenet.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com, app.dewu.com, cdn.poizon.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, res.kfc.com.cn, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, app.zhuanzhuan.com, list-app-m.i4.cn, 2023.redircdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, adserviceretry.kglink.cn, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, 42.187.199.248, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me
+hostname = m.qianbao.qq.com,music.y.qq.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, portal.zjzwfw.gov.cn,cloud.189.cn, zt-app.go189.cn,btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com,qde.qunar.com, homefront.qunar.com, client.qunar.com,api.mcd.cn,creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com,cdb.meituan.com,apimobile.meituan.com,s.jiediankeji.com,res.hongyibo.com.cn,awg.enmonster.com,cdn-evone-ceph.echargenet.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com, app.dewu.com, cdn.poizon.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, res.kfc.com.cn, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, app.zhuanzhuan.com, list-app-m.i4.cn, 2023.redircdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, adserviceretry.kglink.cn, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, 42.187.199.248, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me
