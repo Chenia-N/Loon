@@ -63,16 +63,14 @@ DOMAIN, lookup.api.bsb.baidu.com, REJECT
 # 百度
 DOMAIN-SUFFIX, pos.baidu.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
-DOMAIN, afd.baidu.com, REJECT
+IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
+IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
+
 
 # 百度地图
 DOMAIN, afd.baidu.com, REJECT
 DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
-
-# 百度
-IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
-IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # ======= C ======= #
 
@@ -294,9 +292,14 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2 response-body-json-replace data.adpositionidlist []
 ^https:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ reject-dict
 
-# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
+# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, frodo.douban.com, erebor.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ reject-dict
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* reject-dict
+^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ reject
+^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner reject
+^https?:\/\/erebor\.douban\.com\/count\/\?ad= reject
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
 # 饿了么 //elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
@@ -601,4 +604,4 @@ http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 scr
 
 
 [MitM]
-hostname = wx.17u.cn, a1d5b283e-wx621112590b635086.sh.wxgateway.com,npay.meituan.com, web.meituan.com, m.qianbao.qq.com,music.y.qq.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, portal.zjzwfw.gov.cn,cloud.189.cn, zt-app.go189.cn,btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com,qde.qunar.com, homefront.qunar.com, client.qunar.com,api.mcd.cn,creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com,cdb.meituan.com,apimobile.meituan.com,s.jiediankeji.com,res.hongyibo.com.cn,awg.enmonster.com,cdn-evone-ceph.echargenet.com, app.dewu.com, cdn.poizon.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, res.kfc.com.cn, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, app.zhuanzhuan.com, list-app-m.i4.cn, 2023.redircdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, adserviceretry.kglink.cn, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, 42.187.199.248, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me
+hostname = frodo.douban.com, erebor.douban.com, wx.17u.cn, a1d5b283e-wx621112590b635086.sh.wxgateway.com,npay.meituan.com, web.meituan.com, m.qianbao.qq.com,music.y.qq.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, portal.zjzwfw.gov.cn,cloud.189.cn, zt-app.go189.cn,btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com,qde.qunar.com, homefront.qunar.com, client.qunar.com,api.mcd.cn,creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com,cdb.meituan.com,apimobile.meituan.com,s.jiediankeji.com,res.hongyibo.com.cn,awg.enmonster.com,cdn-evone-ceph.echargenet.com, app.dewu.com, cdn.poizon.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, res.kfc.com.cn, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, app.zhuanzhuan.com, list-app-m.i4.cn, 2023.redircdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, adserviceretry.kglink.cn, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, 42.187.199.248, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me
